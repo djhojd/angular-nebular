@@ -7,7 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:stats": "ng build --prod --stats-json",
+    "analyze": "webpack-bundle-analyzer dist/stats-es2015.json",
+    "prettier:check": "prettier --check \"src/app/**/*.{ts,html}\"",
+    "prettier:write": "prettier --write \"src/app/**/*.{ts,html}\""
   },
   "private": true,
   "dependencies": {
@@ -36,6 +40,7 @@
     "@types/node": "~8.9.4",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "webpack-bundle-analyzer": "^3.4.1"
   }
 }
